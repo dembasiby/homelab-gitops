@@ -76,6 +76,6 @@ This repo reflects an active learning journey. Expect iterative improvements, re
 
 ## 🤝 Acknowledgments
 
-Special thanks to [@mishavandenburg] for championing the homelab-first approach to DevOps education. This project is inspired by [Kubecraft](https://kubecraft.dev)’s belief that hands-on infrastructure builds confidence and clarity.
+Special thanks to [Mischa van den Burg](https://mishavandenburg.com) for championing the homelab-first approach to DevOps education. This project is inspired by [Kubecraft](https://kubecraft.dev)’s belief that hands-on infrastructure builds confidence and clarity.
 
 ---
