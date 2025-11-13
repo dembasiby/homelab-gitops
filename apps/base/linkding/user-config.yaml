@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: user-config
+data:
+  LD_SUPERUSER_NAME: ENC[AES256_GCM,data:wc74RX4=,iv:y8PBrQeqRnEOSFNInRjgIPUKxS3smuqXRJ59DdroUI0=,tag:rlOOltSVscjRRcmEg6lA+Q==,type:str]
+  LD_SUPERUSER_PASSWORD: ENC[AES256_GCM,data:fAO75rQtL2hCgjtBubGibVmQ4SrC7Q==,iv:JCn6JkmSUE5F7cvIHQC/04/5KzqUX9FYJ0y8KTUThLk=,tag:0HsJooXSZrhbe9GSZP/pmw==,type:str]
+sops:
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age:
+    - recipient: age1gh3dtlvs6anf2py98rtkump3762pg0m5mz8s9ut9zqy4vnmu598s2xhjqp
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBZS0hhNHVrTitVVFVFa3B4
+        SWMrUDkycmtLcmQvNFdlT2VQMlBKYnNXblNrClMwQXpIUEMvWUs0ZSttWHczQ3l6
+        SjBtRVJydmlET0J0QUU4YkVsaHhvQjgKLS0tIHYwL1dLS0J1eHNMd2hrRU1UalZS
+        VU9FOUZTZTgzR3NFOExlWDArLy95Nm8KW4V8e1XSzeiRukHZwJeXZWLxot9dFolD
+        WRzlyN2uEWVlZaM8iaID6j+gIZGgNQfLRTG/PwVP9+qS0xrRQCGD8Q==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2025-11-13T00:50:37Z"
+  mac: ENC[AES256_GCM,data:yoIWbiY9pMWjLa8VFNF+0w/AC9t+U5QEIj0v0bqP+Vfv4E/uGYPawF8zGjJIg64r7ONkdpFTeXTKu96tkCUe83ZpCY5Hi3xy5X0/EyLCRwdK3a85aqPLZoYv5acZn7rTYL1YIvxKWBr7HPfKJsCP/bXDueRNxXSoDLcrTnvwhRw=,iv:rYwEEJZH2hvTan4AWI+mvbh/36bPEbAutS1oZR5wS6U=,tag:keH2XThqbCqDSP4W5xCWag==,type:str]
+  pgp: []
+  encrypted_regex: ^(data|stringData)$
+  version: 3.8.1
