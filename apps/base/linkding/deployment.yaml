@@ -26,9 +26,6 @@ spec:
               mountPath: /etc/linkding/data
           securityContext:
             allowPrivilegeEscalation: false
-          envFrom:
-            - configMapRef:
-              name: user-config
       volumes:
         - name: linkding-data
           persistentVolumeClaim:
