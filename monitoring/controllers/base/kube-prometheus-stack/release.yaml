@@ -30,13 +30,10 @@ spec:
       ingress:
         enabled: true
         ingressClassName: traefik
+
         hosts:
           - grafana.dembasiby.tech
-
-        ## TLS configuration for grafana Ingress
-        ## Secret must be manually created in the namespace
-        ##
-        tls: []
-        # - secretName: grafana-general-tls
-        #   hosts:
-        #   - grafana.example.com
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              - grafana.dembasiby.tech
