@@ -8,6 +8,6 @@ spec:
     app: audiobookshelf
   type: ClusterIP
   ports:
-    - port: 80
-    - targetPort: 3005
+    - port: 3005
+    - targetPort: 80
 
