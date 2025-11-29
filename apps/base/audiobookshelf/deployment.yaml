@@ -20,7 +20,7 @@ spec:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:latest
           ports:
-            - containerPort: 13378:80
+            - containerPort: 13378
       #     volumeMounts:
       #       - name: linkding-data
       #         mountPath: /etc/linkding/data
