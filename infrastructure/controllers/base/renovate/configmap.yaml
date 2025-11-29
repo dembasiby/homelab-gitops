@@ -1,0 +1,12 @@
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: renovate-configmap
+  namespace: renovate
+data:
+  RENOVATE_AUTODISCOVER: "false"
+  RENOVATE_GIT_AUTHOR: "Renovate Bot <bot@renovateapp.com>"
+  RENOVATE_PLATFORM: "github"
+---
+
