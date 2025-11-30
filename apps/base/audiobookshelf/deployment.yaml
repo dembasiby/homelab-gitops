@@ -27,16 +27,34 @@ spec:
                   key: PORT
           ports:
             - containerPort: 3005
-      #     volumeMounts:
-      #       - name: audiobooks-data
-      #         mountPath: /etc/audiobookshelf/data/audiobooks
-      #     securityContext:
+      volumeMounts:
+        - name: audiobooks-data
+          mountPath: /etc/audiobookshelf/data/audiobooks
+        - name: podcasts-data
+          mountPath: /etc/audiobookshelf/data/podcasts
+        - name: config-data
+          mountPath: /config
+        - name: metadata-data
+          mountPath: /metadata
+   #     securityContext:
       #       allowPrivilegeEscalation: false
       envFrom:
-        - configMapRef: audiobookshelf-configmap
+        - configMapRef: 
+          name: audiobookshelf-configmap
         # - secretRef:
         #     name: audiobookshelf-container-env
-      # volumes:
-      #   - name: audiobooks-data
-      #     persistentVolumeClaim:
-      #       claimName: audiobooks-data-pvc
+      volumes:
+        - name: audiobooks-data
+          persistentVolumeClaim:
+            claimName: audiobooks-data-pvc
+        - name: podcasts-data
+          persistentVolumeClaim:
+            claimName: podcasts-data-pvc
+        - name: config-data
+          persistentVolumeClaim:
+            claimName: config-data-pvc
+        - name: metadata-data
+          persistentVolumeClaim:
+            claimName: metadata-data-pvc
+
+
