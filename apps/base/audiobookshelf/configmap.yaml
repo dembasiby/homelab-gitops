@@ -6,6 +6,6 @@ metadata:
   namespace: audiobookshelf
 data:
   TZ: UTC
-  PORT: 3005
+  PORT: "3005"
 ---
 
