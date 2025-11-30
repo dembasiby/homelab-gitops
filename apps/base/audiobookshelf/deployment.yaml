@@ -29,9 +29,9 @@ spec:
             - containerPort: 3005
       volumeMounts:
         - name: audiobooks-data
-          mountPath: /etc/audiobookshelf/data/audiobooks
+          mountPath: /audiobooks
         - name: podcasts-data
-          mountPath: /etc/audiobookshelf/data/podcasts
+          mountPath: /podcasts
         - name: config-data
           mountPath: /config
         - name: metadata-data
