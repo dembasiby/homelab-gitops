@@ -22,14 +22,15 @@ spec:
           ports:
             - containerPort: 80
       #     volumeMounts:
-      #       - name: linkding-data
-      #         mountPath: /etc/linkding/data
+      #       - name: audiobooks-data
+      #         mountPath: /etc/audiobookshelf/data/audiobooks
       #     securityContext:
       #       allowPrivilegeEscalation: false
-      #     envFrom:
-      #       - secretRef:
-      #           name: linkding-container-env
+      envFrom:
+        - configMapRef: audiobookshelf-configmap
+        # - secretRef:
+        #     name: audiobookshelf-container-env
       # volumes:
-      #   - name: linkding-data
+      #   - name: audiobooks-data
       #     persistentVolumeClaim:
-      #       claimName: linkding-data-pvc
+      #       claimName: audiobooks-data-pvc
