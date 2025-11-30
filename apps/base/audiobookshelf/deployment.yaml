@@ -22,7 +22,7 @@ spec:
           env:
             - name: PORT
               valueFrom:
-                configMapRef:
+                configMapKeyRef:
                   name: audiobookshelf-configmap
                   key: PORT
           ports:
