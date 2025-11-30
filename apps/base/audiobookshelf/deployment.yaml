@@ -19,8 +19,14 @@ spec:
       containers:
         - name: audiobookshelf
           image: ghcr.io/advplyr/audiobookshelf:latest
+          env:
+            - name: PORT
+              valueFrom:
+                configMapRef:
+                  name: audiobookshelf-configmap
+                  key: PORT
           ports:
-            - containerPort: 80
+            - containerPort: 3005
       #     volumeMounts:
       #       - name: audiobooks-data
       #         mountPath: /etc/audiobookshelf/data/audiobooks
