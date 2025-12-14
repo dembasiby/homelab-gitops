@@ -20,14 +20,7 @@ spec:
 
       containers:
         - name: notes
-          image: triliumnext/trilium:v0.91.6
-          imagePullPolicy:
-          # env:
-          #   - name: DB_HOST
-          #     valueFrom:
-          #       configMapKeyRef:
-          #         name: notes
-          #         key: DB_HOST
+          image: triliumnext/trilium:stable
           ports:
             - containerPort: 7070
               name: notes
