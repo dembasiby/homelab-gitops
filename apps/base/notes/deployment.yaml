@@ -1,0 +1,41 @@
+# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+apiVersion: apps/v1
+kind: Deployment
+spec:
+  selector:
+    matchLabels:
+      app: notes
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: notes
+    spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
+
+      containers:
+        - name: notes
+          image: triliumnext/trilium:v0.91.6
+          imagePullPolicy:
+          # env:
+          #   - name: DB_HOST
+          #     valueFrom:
+          #       configMapKeyRef:
+          #         name: notes
+          #         key: DB_HOST
+          ports:
+            - containerPort: 7070
+              name: notes
+      #     volumeMounts:
+      #       - name: localtime
+      #         mountPath: /etc/localtime
+      # volumes:
+      #   - name: localtime
+      #     hostPath:
+      #       path: /usr/share/zoneinfo/Asia/Taipei
+      # restartPolicy: Always
+---
+
