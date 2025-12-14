@@ -6,8 +6,7 @@ metadata:
   namespace: notes
 data:
   TZ: UTC
-  TRILIUM_UID: "1000"
-  TRILIUM_GID: "1000"
-  TRILIUM_DATA_DIR: "/home/trilium/trilium-data"
+  # TRILIUM_UID: "1000"
+  # TRILIUM_GID: "1000"
 ---
 
