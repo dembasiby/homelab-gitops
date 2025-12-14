@@ -24,6 +24,9 @@ spec:
           ports:
             - containerPort: 7070
               name: notes
+          envFrom:
+            - configMapRef:
+              name: notes-configmap
       #     volumeMounts:
       #       - name: localtime
       #         mountPath: /etc/localtime

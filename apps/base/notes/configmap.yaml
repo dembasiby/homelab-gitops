@@ -1,0 +1,12 @@
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: notes-configmap
+  namespace: notes
+data:
+  TZ: UTC
+  USER_UID: "1000"
+  USER_GID: "1000"
+---
+
