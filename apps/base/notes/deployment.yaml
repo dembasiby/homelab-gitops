@@ -26,7 +26,7 @@ spec:
               name: notes
           envFrom:
             - configMapRef:
-              name: notes-configmap
+                name: notes-configmap
       #     volumeMounts:
       #       - name: localtime
       #         mountPath: /etc/localtime
